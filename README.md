@@ -1,4 +1,5 @@
 # Guia webStory #
+para ejecutar el server hay que usar sudo su y luego el comando mongod
 > **Objetivo**
 > * Comprender los conceptos básicos del entorno de programacion Node.js, haciendo uso de su lenguaje JavaScript.
 > * Crear un proyecto haciendo uso de Node.js y apoyado por diferentes dependencias como : Express, Socket.io, Nodemon, etc.
