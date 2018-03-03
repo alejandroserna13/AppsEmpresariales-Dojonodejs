@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>app con socket.io</title>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<!-- Diseño MaterializeCSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<!-- Ajustes -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+	<div id="index-banner" class=" teal darken-4">
+		<div class="section">
+			<div class="container">
+				<h1 class="header center white-text text-lighten-2">DOJO Node.js</h1>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col m8 s12">
+				<div class="card">
+					<div class="card-image">
+						<img class="teal darken-3" style="height:90px" />
+						<span class="card-title">Historia</span>
+					</div>
+					<div class="card-content">
+						<p id="pStory"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row">
+						<div class="col m12 s12">
+							<div class="card-panel">
+								<div class="input-field">
+									<input id="author" type="text" required>
+									<label for="author">Nombre</label>
+								</div>
+								Palabra actual:
+								<div class="chip teal white-text" id="wordText"></div>
+								<div class="input-field">
+									<textarea id="message" class="materialize-textarea " required></textarea>
+									<label for="message">Mensaje</label>
+								</div>
+								<input type="submit" value="Enviar" id="enviar_historia" class="btn">
+								<div id="results">
+										<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+								</div>				
+							</div>			
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col m4 s12">
+				<div class="card teal">
+					<div class="card-image">
+						<img class="teal darken-3" style="height:90px" />
+						<span class="card-title">Agregar palabras</span>
+					</div>
+					<div class="card-content white-text">
+						<form action="api/setWord" method="POST">
+							<input id="Input_word" name="inputWord" type="text" class="word-input white-text" placeholder="Palabra" required>
+							<input type="submit" value="Enviar" id="enviar_Palabra" class="btn">
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /container -->
+</body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+</html>
